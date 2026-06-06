@@ -1,0 +1,38 @@
+[project]
+name = "auth-service"
+version = "0.1.0"
+description = "Auth service: registration + JWT issuing"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "sqlalchemy>=2.0.30",
+    "aiosqlite>=0.20.0",
+    "greenlet>=3.0.0",
+    "pydantic[email]>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.9",
+    "pyjwt>=2.9.0",
+    "passlib[bcrypt]>=1.7.4",
+    "bcrypt==4.0.1",
+    "aiogram>=3.13.0",
+    "celery>=5.4.0",
+    "redis>=5.0.0",
+    "httpx>=0.27.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+    "respx>=0.21.0",
+    "ruff>=0.14.0",
+    "pytest-mock>=3.14.0",
+    "fakeredis>=2.26.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
